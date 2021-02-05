@@ -1,0 +1,23 @@
+<p>Employee</p>
+
+<div *ngIf="loading">
+  Loading...
+</div>
+<div *ngIf="error">
+  Error Occurred :(
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Employee</th>
+      <th scope="col">Advances</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <th scope="row">{{ employee.EmployeeName }}</th>
+      <td>{{ getAuthorNames(employee.EmployeeAdvances) }}</td>
+    </tr>
+  </tbody>
+</table>
